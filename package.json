@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "release": "release-it"
   },
   "keywords": [],
   "author": "",
@@ -13,11 +14,38 @@
     "@commitlint/cli": "^17.7.1",
     "@commitlint/config-conventional": "^17.7.0",
     "@release-it/conventional-changelog": "^7.0.2",
-    "express": "^4.18.2", 
-     "husky": "^8.0.3",
-
+    "express": "^4.18.2",
+    "husky": "^8.0.3",
     "release-it": "^16.2.1"
-  }
- 
+  },
+  "release-it": {
+    "git": {
+      "commitMessage": "chore: release v${version}"
+    },
+    "github": {
+      "release": true
+    },
+    "npm": {
+      "publish": false
+    },
+    "plugins": {
+      "@release-it/conventional-changelog": {
+        "infile": "CHANGELOG.md",
+        "present": {
+          "name": "conventionalcommits",
+          "types": [
+            {
+              "types": "feat",
+              "section": "Features"
+            },
+            {
+              "types": "fix",
+              "section": "Bug Fixes"
+            },
+            {}
+          ]
+        }
+      }
     }
- 
+  }
+}
