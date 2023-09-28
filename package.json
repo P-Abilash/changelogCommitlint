@@ -1,0 +1,23 @@
+{
+  "name": "docker24-9",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@commitlint/cli": "^17.7.1",
+    "@commitlint/config-conventional": "^17.7.0",
+    "@release-it/conventional-changelog": "^7.0.2",
+    "express": "^4.18.2", 
+     "husky": "^8.0.3",
+
+    "release-it": "^16.2.1"
+  }
+ 
+    }
+ 
